@@ -9,7 +9,11 @@ function createGrid(size) {
             col.setAttribute('class','col');
             col.style.border = "1px solid black";
             col.textContent = (j * size) + i;
+            col.onmouseover = () => {
+                col.style.backgroundColor = 'blue';
+            };
             row.appendChild(col);
+
         }
         container.appendChild(row);
     }
